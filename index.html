@@ -121,3 +121,90 @@
             letter-spacing: 2px;
             text-transform: uppercase;
             font-size: 0.8em;
+            cursor: pointer;
+        }
+        figure.snip1208 a {
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            position: absolute;
+            z-index: 1;
+        }
+        figure.snip1208:hover img,
+        figure.snip1208.hover img {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+        figure.snip1208:hover .date,
+        figure.snip1208.hover .date {
+            -webkit-transform: rotateY(90deg);
+            transform: rotateY(90deg);
+            -webkit-transition-delay: 0s;
+            transition-delay: 0s;
+        }
+        figure.snip1208:hover i,
+        figure.snip1208.hover i {
+            -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+            -webkit-transition-delay: 0.2s;
+            transition-delay: 0.2s;
+        }
+        figure.snip1208:hover button,
+        figure.snip1208.hover button {
+            background-color: #117964;
+        }
+        /* --- Provided CSS End --- */
+    </style>
+</head>
+<body>
+
+    <header style="text-align: center; margin-bottom: 40px;">
+        <h2 style="font-family: 'Raleway'; font-weight: 800; text-transform: uppercase; letter-spacing: 4px; color: #1a1a1a;">
+            The Global Insight
+        </h2>
+        <p style="font-family: 'Raleway'; font-size: 12px; color: #888; letter-spacing: 2px;">PREMIUM CURATION</p>
+    </header>
+
+    <div class="container">
+        <figure class="snip1208">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample66.jpg" alt="sample66"/>
+            <div class="date"><span class="day">28</span><span class="month">Oct</span></div><i class="ion-film-marker"></i>
+            <figcaption>
+                <h3>The World Ended Yesterday</h3>
+                <p>I don't need to compromise my principles, because they don't have the slightest bearing on what happens to me anyway.</p>
+                <button>Read More</button>
+            </figcaption><a href="#"></a>
+        </figure>
+
+        <figure class="snip1208 hover">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample9.jpg" alt="sample9"/>
+            <div class="date"><span class="day">17</span><span class="month">Nov</span></div><i class="ion-headphone"> </i>
+            <figcaption>
+                <h3>An Abstract Post Heading</h3>
+                <p>Sometimes the surest sign that intelligent life exists elsewhere in the universe is that none of it has tried to contact us.</p>
+                <button>Read More</button>
+            </figcaption><a href="#"></a>
+        </figure>
+
+        <figure class="snip1208">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample6.jpg" alt="sample6"/>
+            <div class="date"><span class="day">01</span><span class="month">Dec</span></div><i class="ion-checkmark"> </i>
+            <figcaption>
+                <h3>Down with this sort of thing</h3>
+                <p>I don't need to compromise my principles, because they don't have the slightest bearing on what happens to me anyway.</p>
+                <button>Read More</button>
+            </figcaption><a href="#"></a>
+        </figure>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(".hover").mouseleave(
+            function () {
+                $(this).removeClass("hover");
+            }
+        );
+    </script>
+</body>
+</html>
