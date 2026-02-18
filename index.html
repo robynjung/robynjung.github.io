@@ -3,208 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Economy Insight</title>
-    
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700,800" rel="stylesheet">
-    <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
-    
+    <title>The Global Insight | Premium Edition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     <style>
-        /* --- Base Layout Style --- */
-        body {
-            background-color: #fdfcf8; /* 미니멀 프리미엄 아이보리 */
-            margin: 0;
-            padding: 50px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        :root {
+            --bg-ivory: #fdfcf8; /* 눈이 편안한 아이보리 배경 */
+            --text-main: #1a1a1a;
+            --accent-red: #e31212; /* 이코노미스트 스타일의 포인트 레드 */
         }
-
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            max-width: 1200px;
-            gap: 20px;
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: var(--bg-ivory); 
+            color: var(--text-main);
+            line-height: 1.6;
         }
-
-        /* --- Provided CSS Start --- */
-        figure.snip1208 {
-            font-family: 'Raleway', Arial, sans-serif;
-            color: #fff;
-            position: relative;
-            overflow: hidden;
-            margin: 10px;
-            min-width: 220px;
-            max-width: 310px;
-            width: 100%;
-            background-color: #ffffff;
-            color: #000000;
-            text-align: left;
-            font-size: 16px;
-            border: 1px solid #eeebe3; /* 플랫 디자인을 위한 연한 테두리 */
-        }
-        figure.snip1208 * {
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-            -webkit-transition: all 0.2s ease;
-            transition: all 0.2s ease;
-        }
-        figure.snip1208 img {
-            max-width: 100%;
-            vertical-align: top;
-            -webkit-transform-origin: 50% 100%;
-            transform-origin: 50% 100%;
-            -webkit-transition: all 0.4s ease;
-            transition: all 0.4s ease;
-        }
-        figure.snip1208 figcaption {
-            padding: 25px;
-            position: relative;
-        }
-        figure.snip1208 .date,
-        figure.snip1208 i {
-            background-color: #1abc9c;
-            top: 25px;
-            color: #fff;
-            left: 25px;
-            min-height: 60px;
-            min-width: 60px;
-            position: absolute;
-            text-align: center;
-        }
-        figure.snip1208 .date {
-            -webkit-transition-delay: 0.2s;
-            transition-delay: 0.2s;
-            font-size: 22px;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-        figure.snip1208 .date span {
-            display: block;
-            line-height: 30px;
-        }
-        figure.snip1208 .date .month {
-            font-size: 16px;
-            background-color: rgba(0, 0, 0, 0.1);
-        }
-        figure.snip1208 i {
-            line-height: 60px;
-            font-size: 30px;
-            -webkit-transform: rotateY(-90deg);
-            transform: rotateY(-90deg);
-            -webkit-transition-delay: 0s;
-            transition-delay: 0s;
-        }
-        figure.snip1208 h3,
-        figure.snip1208 p {
-            margin: 0;
-            padding: 0;
-        }
-        figure.snip1208 h3 {
-            margin-bottom: 10px;
-            display: inline-block;
-            font-weight: 600;
-            color: #333333;
-            text-transform: uppercase;
-        }
-        figure.snip1208 p {
-            font-size: 0.8em;
-            margin-bottom: 20px;
-            line-height: 1.6em;
-        }
-        figure.snip1208 button {
-            border: medium none;
-            padding: 10px 20px;
-            background-color: #1abc9c;
-            font-weight: 800;
-            color: #ffffff;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            font-size: 0.8em;
-            cursor: pointer;
-        }
-        figure.snip1208 a {
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            position: absolute;
-            z-index: 1;
-        }
-        figure.snip1208:hover img,
-        figure.snip1208.hover img {
-            -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-        }
-        figure.snip1208:hover .date,
-        figure.snip1208.hover .date {
-            -webkit-transform: rotateY(90deg);
-            transform: rotateY(90deg);
-            -webkit-transition-delay: 0s;
-            transition-delay: 0s;
-        }
-        figure.snip1208:hover i,
-        figure.snip1208.hover i {
-            -webkit-transform: rotateY(0);
-            transform: rotateY(0);
-            -webkit-transition-delay: 0.2s;
-            transition-delay: 0.2s;
-        }
-        figure.snip1208:hover button,
-        figure.snip1208.hover button {
-            background-color: #117964;
-        }
-        /* --- Provided CSS End --- */
+        h1, h2, h3, .serif { font-family: 'Playfair Display', serif; }
+        
+        /* 플랫 디자인을 위한 테두리 및 그림자 제거 스타일 */
+        .premium-border { border-top: 1px solid #e5e1d8; border-bottom: 1px solid #e5e1d8; }
+        .article-divider { border-bottom: 1px solid #eeebe3; }
+        iframe { filter: grayscale(10%); border: none; }
     </style>
 </head>
-<body>
+<body class="antialiased">
 
-    <header style="text-align: center; margin-bottom: 40px;">
-        <h2 style="font-family: 'Raleway'; font-weight: 800; text-transform: uppercase; letter-spacing: 4px; color: #1a1a1a;">
-            The Global Insight
-        </h2>
-        <p style="font-family: 'Raleway'; font-size: 12px; color: #888; letter-spacing: 2px;">PREMIUM CURATION</p>
+    <header class="max-w-5xl mx-auto pt-12 pb-8 px-6 text-center">
+        <div class="inline-block border-b-4 border-red-600 mb-4">
+            <h1 class="text-4xl md:text-5xl font-bold tracking-tight uppercase px-2">The Global Insight</h1>
+        </div>
+        <p class="text-sm tracking-[0.2em] text-gray-500 uppercase font-medium">Economy & Strategy • February 2026</p>
     </header>
 
-    <div class="container">
-        <figure class="snip1208">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample66.jpg" alt="sample66"/>
-            <div class="date"><span class="day">28</span><span class="month">Oct</span></div><i class="ion-film-marker"></i>
-            <figcaption>
-                <h3>The World Ended Yesterday</h3>
-                <p>I don't need to compromise my principles, because they don't have the slightest bearing on what happens to me anyway.</p>
-                <button>Read More</button>
-            </figcaption><a href="#"></a>
-        </figure>
+    <main class="max-w-5xl mx-auto px-6">
+        
+        <section class="mb-16">
+            <div class="relative overflow-hidden mb-6">
+                <img src="https://images.unsplash.com/photo-1611974714652-960205869f7d?q=80&w=2070&auto=format&fit=crop" 
+                     alt="Main Story" class="w-full h-[500px] object-cover grayscale-[20%] hover:grayscale-0 transition duration-700">
+            </div>
+            <div class="max-w-3xl mx-auto text-center">
+                <span class="text-red-600 font-bold text-xs uppercase tracking-widest">Cover Story</span>
+                <h2 class="text-3xl md:text-5xl mt-3 mb-6 leading-tight">The Great Deceleration: Are Central Banks Losing Their Grip?</h2>
+                <p class="text-lg text-gray-600 mb-6 italic">전 세계적인 경기 둔화의 조짐 속에서 각국 중앙은행의 금리 정책이 시험대에 올랐습니다. 시장이 우려하는 시나리오와 기회 요인을 분석합니다.</p>
+                <a href="#" class="inline-block border-b border-black pb-1 font-semibold text-sm hover:text-red-600 hover:border-red-600 transition">Read the full analysis →</a>
+            </div>
+        </section>
 
-        <figure class="snip1208 hover">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample9.jpg" alt="sample9"/>
-            <div class="date"><span class="day">17</span><span class="month">Nov</span></div><i class="ion-headphone"> </i>
-            <figcaption>
-                <h3>An Abstract Post Heading</h3>
-                <p>Sometimes the surest sign that intelligent life exists elsewhere in the universe is that none of it has tried to contact us.</p>
-                <button>Read More</button>
-            </figcaption><a href="#"></a>
-        </figure>
+        <div class="premium-border py-2 mb-12 flex justify-between text-xs font-bold uppercase tracking-tighter">
+            <span>Latest Intelligence</span>
+            <span>Video Reports</span>
+        </div>
 
-        <figure class="snip1208">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample6.jpg" alt="sample6"/>
-            <div class="date"><span class="day">01</span><span class="month">Dec</span></div><i class="ion-checkmark"> </i>
-            <figcaption>
-                <h3>Down with this sort of thing</h3>
-                <p>I don't need to compromise my principles, because they don't have the slightest bearing on what happens to me anyway.</p>
-                <button>Read More</button>
-            </figcaption><a href="#"></a>
-        </figure>
-    </div>
+        <div class="grid md:grid-cols-3 gap-12">
+            <div class="md:col-span-2 space-y-12">
+                <article class="article-divider pb-8">
+                    <span class="text-xs font-bold text-gray-400 uppercase">Wall Street Journal</span>
+                    <h3 class="text-2xl mt-2 mb-3">Tech Valuations in the Age of Sustainable AI</h3>
+                    <p class="text-gray-600 text-sm mb-4">수익성에 대한 의구심에도 불구하고, AI 인프라 확충을 위한 빅테크 기업들의 투자는 사상 최대치를 기록하고 있습니다.</p>
+                    <time class="text-[11px] text-gray-400 uppercase">3 Hours Ago • 6 min read</time>
+                </article>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(".hover").mouseleave(
-            function () {
-                $(this).removeClass("hover");
-            }
-        );
-    </script>
+                <article class="article-divider pb-8">
+                    <span class="text-xs font-bold text-gray-400 uppercase">Financial Times</span>
+                    <h3 class="text-2xl mt-2 mb-3">Europe’s Energy Blueprint for 2030</h3>
+                    <p class="text-gray-600 text-sm mb-4">탈탄소화와 에너지 안보라는 두 마리 토끼를 잡기 위한 유럽 연합의 새로운 규제안이 발표되었습니다.</p>
+                    <time class="text-[11px] text-gray-400 uppercase">5 Hours Ago • 4 min read</time>
+                </article>
+
+                <article class="pb-8">
+                    <span class="text-xs font-bold text-gray-400 uppercase">Bloomberg</span>
+                    <h3 class="text-2xl mt-2 mb-3">The Invisible Shift in Global Supply Chains</h3>
+                    <p class="text-gray-600 text-sm mb-4">지정학적 리스크 완화를 위해 생산 거점을 다변화하려는 기업들의 '프렌드쇼어링' 현황을 짚어봅니다.</p>
+                    <time class="text-[11px] text-gray-400 uppercase">Yesterday • 8 min read</time>
+                </article>
+            </div>
+
+            <div class="space-y-8">
+                <h4 class="text-xs font-bold uppercase border-l-4 border-red-600 pl-3">Video Analysis</h4>
+                
+                <div class="space-y-6">
+                    <div>
+                        <div class="aspect-video bg-gray-200 mb-3">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <h5 class="font-bold text-sm leading-snug">CNBC: The 2026 Outlook for Emerging Markets</h5>
+                    </div>
+
+                    <div>
+                        <div class="aspect-video bg-gray-200 mb-3">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <h5 class="font-bold text-sm leading-snug">The Economist: Why Global Trade is Reshaping</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="mt-20 py-12 border-t border-gray-200 text-center">
+        <p class="serif italic text-2xl mb-4">The Global Insight</p>
+        <p class="text-xs text-gray-400 uppercase tracking-widest leading-loose">
+            Curated Intelligence for the Global Citizen<br>
+            GitHub Pages Hosted Platform
+        </p>
+    </footer>
+
 </body>
 </html>
